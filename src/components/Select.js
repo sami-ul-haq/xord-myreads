@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { BookContext } from '../context/BookContext';
 
 const Select = ({book , type}) => {
+
     const [ bookStatus , setBookStatus ] = useState("");
     const { addBooksContinueRead, addBooksWantsToRead, addBooksToRead, removeBook } = useContext(BookContext);
-    console.log(bookStatus)
 
     const bookHandler = (book) => {
         if(bookStatus === "currentlyReading"){
