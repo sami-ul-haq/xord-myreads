@@ -23,8 +23,13 @@ const bookReducer = (state, action) => {
         };
 
     case "NONE":
-      return state;
-
+        return {
+            ...state,
+            wantToRead: state.read.filter((book) => book.id !== action.payload),
+            currentlyReading: state.wantToRead.filter((book) => book.id !== action.payload),
+            read: state.read.filter((book) => book.id !== action.payload),
+          };
+      
     default:
       return state;
   }
