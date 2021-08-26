@@ -4,7 +4,6 @@ import Select from './Select';
 const Book = ({book , type}) => {
 
     const {title , authors, imageLinks} = book;
-    console.log(imageLinks);
 
     const imageUrl = imageLinks ? imageLinks.thumbnail : " ";
     
